@@ -1,0 +1,101 @@
+% alloy.sty
+% Alloy mode for the LaTeX listings package.
+% This is public domain
+
+\lstdefinelanguage{alloy}{
+  keywords={%
+      assert, pred, all, no, lone, one, some, check, run,
+      but, let, implies, not, iff, in, and, or, set, sig, Int, int,
+      if, then, else, exactly, disj, fact, fun, module, abstract,
+      extends, open, none, univ, iden, seq,
+  },
+  literate=%
+    *{:}{{{\color[HTML]{2835C0}{$\colon$}}}}1
+    {>}{{{\color[HTML]{2835C0}{>}}}}1
+    {<}{{{\color[HTML]{2835C0}{<}}}}1
+    {|}{{{\color[HTML]{2835C0}{|}}}}1
+    {==}{{{\color[HTML]{2835C0}{$=$}}}}1
+    {=}{{{\color[HTML]{2835C0}{$=$}}}}1
+    {!=}{{{\color[HTML]{2835C0}{$\neq$}}}}1
+    {&&}{{{\color[HTML]{2835C0}{$\land$}}}}1
+    {||}{{{\color[HTML]{2835C0}{$\lor$}}}}1
+    {<=}{{{\color[HTML]{2835C0}{$\le$}}}}1
+    {>=}{{{\color[HTML]{2835C0}{$\ge$}}}}1
+    {!in}{{{\color[HTML]{2835C0}{$\not\in$}}}}1
+    {\\in}{{{\color[HTML]{2835C0}{$\in$}}}}1
+    {=>}{{{\color[HTML]{2835C0}{$\implies$}}}}2
+    % the following isn't actually Alloy, but it gives the option to produce nicer latex
+    {|=>}{{{\color[HTML]{2835C0}{$\Rightarrow$}}}}2
+    {<=set}{{{\color[HTML]{2835C0}{$\subseteq$}}}}1
+    {+set}{{{\color[HTML]{2835C0}{$\cup$}}}}1
+    {*set}{{{\color[HTML]{2835C0}{$\cap$}}}}1
+    {==>}{{{{\color[HTML]{2835C0}$\Longrightarrow$}}}}3
+    {<==>}{$\Longleftrightarrow$}4
+    {...}{$\ldots$}1
+    {\\hl}{$\hline$}1
+    {\\alpha}{$\alpha$}1
+    {\\beta}{$\beta$}1
+    {\\gamma}{$\gamma$}1
+    {\\delta}{$\delta$}1
+    {\\epsilon}{$\epsilon$}1
+    {\\zeta}{$\zeta$}1
+    {\\eta}{$\eta$}1
+    {\\theta}{$\theta$}1
+    {\\iota}{$\iota$}1
+    {\\kappa}{$\kappa$}1
+    {\\lambda}{$\lambda$}1
+    {\\mu}{$\mu$}1
+    {\\nu}{$\nu$}1
+    {\\xi}{$\xi$}1
+    {\\pi}{$\pi$}1
+    {\\rho}{$\rho$}1
+    {\\sigma}{$\sigma$}1
+    {\\tau}{$\tau$}1
+    {\\upsilon}{$\upsilon$}1
+    {\\phi}{$\phi$}1
+    {\\chi}{$\chi$}1
+    {\\psi}{$\psi$}1
+    {\\omega}{$\omega$}1
+    {\\Gamma}{$\Gamma$}1
+    {\\Delta}{$\Delta$}1
+    {\\Theta}{$\Theta$}1
+    {\\Lambda}{$\Lambda$}1
+    {\\Xi}{$\Xi$}1
+    {\\Pi}{$\Pi$}1
+    {\\Sigma}{$\Sigma$}1
+    {\\Upsilon}{$\Upsilon$}1
+    {\\Phi}{$\Phi$}1
+    {\\Psi}{$\Psi$}1
+    {\\Omega}{$\Omega$}1
+    {\\EOF}{\;}1
+    ,
+  sensitive=true,  % case sensitive
+  morecomment=[l]//,%
+  morecomment=[l]{--},%
+  morecomment=[s]{/*}{*/},%
+  morestring=[b]",
+  numbers=none,
+  firstnumber=1,
+  numberstyle=\tiny,
+  stepnumber=2,
+  basicstyle=\scriptsize\ttfamily,
+  commentstyle=\color[HTML]{00A108}\itshape,
+  keywordstyle=\color[HTML]{2835C0}\bfseries,
+  ndkeywordstyle=\bfseries,
+}
+
+% inline
+\def\A{%
+    \lstinline[language=alloy,basicstyle=\ttfamily,columns=fixed]}
+
+% paragraph
+\lstnewenvironment{alloy}[1][]{%
+  \lstset{language=alloy,
+    floatplacement={tbp},captionpos=b,
+    xleftmargin=8pt,xrightmargin=8pt,basicstyle=\ttfamily,#1}}{}
+
+% paragraph from file
+\newcommand{\alloyfile}[1]{
+  \lstinputlisting[language=alloy,%
+    frame=lines,xleftmargin=8pt,xrightmargin=8pt,basicstyle=\ttfamily,columns=fixed]{#1}
+}
