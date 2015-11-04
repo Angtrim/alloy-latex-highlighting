@@ -1,6 +1,7 @@
 ## Alloy Latex Highlighting
 
 Alloy syntax highlighting for the "listings package" (Latex) (It follows MIT's Alloy environment color style).
+
 Based on this  [gist](https://gist.github.com/timvdalen/3796300)
 
 ## Preview
@@ -15,6 +16,8 @@ Just use `implies` instead.
 
 
 ## Installation
+Dowload the .sty file you find in this repo.
+
 
 Add the dependencies and the .sty file to your main file :
 
@@ -24,7 +27,7 @@ Add the dependencies and the .sty file to your main file :
 
 ## How to use
 
-To use it just include you alloy source code where you want :
+To use it just include your alloy source code where you want :
 
     \lstinputlisting[language=alloy]{path-to-your-alloy-source-code}
 
