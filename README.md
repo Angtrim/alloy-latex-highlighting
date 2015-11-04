@@ -17,6 +17,7 @@ Just use `implies` instead.
 ## Installation
 
 Add the dependencies and the .sty file to your main file :
+
     \usepackage[dvipsnames]{xcolor}
     \usepackage{listings}
     \usepackage{alloy-style}
