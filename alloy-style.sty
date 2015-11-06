@@ -99,3 +99,10 @@
   \lstinputlisting[language=alloy,%
     frame=lines,xleftmargin=8pt,xrightmargin=8pt,basicstyle=\ttfamily,columns=fixed]{#1}
 }
+
+\lstset{
+    %Add this if you want to display border around your code  
+    %frame=single,
+    breaklines=true,
+    postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}}
+}
