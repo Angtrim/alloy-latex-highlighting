@@ -16,21 +16,22 @@ Just use `implies` instead.
 
 
 ## Installation
-Dowload the .sty file you find in this repo.
+Dowload the _.sty_ file you find in this repo.
 
 
-Add the dependencies and the .sty file to your main file :
-
-    \usepackage[dvipsnames]{xcolor}
-    \usepackage{listings}
-    \usepackage{alloy-style}
+Add the dependencies and the _.sty_ file to your main file :
+```tex
+\usepackage[dvipsnames]{xcolor}
+\usepackage{listings}
+\usepackage{alloy-style}
+```
 
 ## How to use
 
 To use it just include your alloy source code where you want :
-
-    \lstinputlisting[language=alloy]{path-to-your-alloy-source-code}
-
+```tex
+\lstinputlisting[language=alloy]{path-to-your-alloy-source-code}
+```
 
 ## License
 
