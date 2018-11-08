@@ -1,0 +1,23 @@
+\documentclass{article}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{listings}
+\usepackage{alloy-style}
+
+\begin{document}
+    \begin{lstlisting}[language=alloy]
+module myTaxiService
+
+    // classes
+    one sig GenericString {}
+
+    sig User {
+        ID: one GenericString
+    }
+
+    abstract sig Ride {
+        driver: one TaxiDriver,
+        passenger: some User
+    }
+    \end{lstlisting}
+\end{document}
